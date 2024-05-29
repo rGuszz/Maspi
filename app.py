@@ -9,8 +9,7 @@ opciones = st.container()
 with titulo:
         st.title("Bienvenido a la interfaz para calcular el precio de opciones y ver otros datos")
 with datos:
-        archivo = st.file_uploader("Elije un archivo de Escel", type=["xls", "xlsx", "xlsm", "xlsb"])
-        wb = xw.Book(archivo)
+        wb = xw.Book(r"")
         sheet_prima = wb.sheets("Cálculo de prima")
         sheet_resumen = wb.sheets("Resumen")
         edad = st.slider("Elije la edad del asegurado", min_value=30, max_value=45, step=1, value=30)
